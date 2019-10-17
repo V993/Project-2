@@ -22,11 +22,16 @@ void splitOnSpace(string s, string & before, string & after);
 
 int main()
 {
-    string word; 
+    string input; 
     cout << "Enter a word: ";
-    cin >> word;
+    cin >> input;
     cout << endl;
-
+    string word = "";
+    for (int i = 0; i < input.length(); i++)
+    {
+        char chr = toupper(input[i]);
+        word += chr; 
+    }
     string pronounciation = dictionary(word);
     cout << "Pronounciation: " << pronounciation << endl;  
 
